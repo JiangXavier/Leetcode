@@ -52,3 +52,19 @@ class Solution:
         return s.replace(" ","%20")
 ```
 ### 剑指 Offer 06. 从尾到头打印链表
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def reversePrint(self, head: ListNode) -> List[int]:
+        a = deque()
+        d = head
+        while d:
+            a.appendleft(d.val)
+            d = d.next
+        return list(a)
+```
