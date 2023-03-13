@@ -68,3 +68,22 @@ class Solution:
             d = d.next
         return list(a)
 ```
+### 剑指 Offer 22. 链表中倒数第k个节点
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def getKthFromEnd(self, head: ListNode, k: int) -> ListNode:
+        pre = head
+        for i in range(k-1):
+            pre = pre.next
+        n = head
+        while pre.next != None:
+            n = n.next
+            pre = pre.next
+        return n
+```
